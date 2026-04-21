@@ -1,0 +1,76 @@
+baseURL = "https://gogo.anthony42.eu.org/"
+title = "Anthony"
+theme = "PaperMod"
+defaultContentLanguage = "en"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  
+# ============================================
+# Taxonomies (Categories & Tags)
+# ============================================
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+# ============================================
+# Main Parameters
+# ============================================
+[params]
+  # ===== Content Display =====
+  ShowReadingTime = true          # Show estimated reading time
+  ShowPostNavLinks = true         # Show next/prev post links
+  ShowBreadCrumbs = true          # Show breadcrumb navigation
+  ShowToc = true                  # Show table of contents
+  TocOpen = false                 # Keep TOC collapsed by default
+  ShowCodeCopyButtons = true      # Show copy button on code blocks
+  ShowTaxonomy = true             # Show categories/tags in home page
+  # ===== Search Feature =====
+  ShowSearchButton = true         # Show search button in menu
+  ShowSearchInMenu = true         # Include search in navigation menu
+  
+  # Search engine configuration
+  [params.search]
+    enable = true                 # Enable search functionality
+    type = "fuse"                 # Search library: "fuse" for client-side search
+    caseSensitive = false         # Case sensitive search (true/false)
+    threshold = 0.3               # Fuzzy search threshold (0.0 = exact, 1.0 = very fuzzy)
+    maxResultLength = 10          # Maximum number of search results to display
+
+  # ===== Home Page Info =====
+ # [params.homeInfoParams]
+ #  Title = "Welcome to my blog"
+ #  Content = "This is my technical notes and thoughts."
+
+  # ===== Social Icons =====
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/wuyukk"
+
+# ============================================
+# Main Navigation Menu
+# ============================================
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 2
+
+[[menu.main]]
+  name = "Categories"
+  url = "/categories/"
+  weight = 3
+
+[[menu.main]]
+  name = "Archive"
+  url = "/archives/"
+  weight = 4
+
+[[menu.main]]
+  name = "Search"
+  url = "/search/"
+  weight = 5
